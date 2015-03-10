@@ -30,6 +30,9 @@ a:link, a:visited {
     padding-top: 22px;
     /*float: left;*/
 }
+#logo a img {
+    border: 0; //ie
+}
 #site-name {
     color: white;
     position: absolute;
