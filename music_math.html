@@ -1,136 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Music and Math</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/about.css" />
-    <link rel="stylesheet" type="text/css" href="css/instruction.css" />
-    <link rel="stylesheet" type="text/css" href="css/policy.css" />
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script type="text/javascript" src="js.js"></script>
+  <meta charset="UTF-8">
+  <title>Music and Math</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/about.css" />
+  <link rel="stylesheet" type="text/css" href="css/instruction.css" />
+  <link rel="stylesheet" type="text/css" href="css/policy.css" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="js.js"></script>
 </head>
 <body>
 <div class="header">
-    <div id="logo">
-        <a href="index.html" title="Home" rel="home">
-            <img src="images/logo_6.png" alt="Home" height="100px"/>
-        </a>
-    </div>
-    <div id="site-name">
-        <a href="index.html" title="Home" rel="home"><h1>André Music Studio</h1></a>
-        <h3>Violin, viola, bass lessons in Cupertino and San Jose</h3>
-    </div>
+  <div id="logo">
+    <a href="index.html" title="Home" rel="home">
+      <img src="images/logo_6.png" alt="Home" height="100px"/>
+    </a>
+  </div>
+  <div id="site-name">
+    <a href="index.html" title="Home" rel="home"><h1>André Music Studio</h1></a>
+    <h3>Violin, viola, bass lessons in Cupertino and San Jose</h3>
+  </div>
 
-    <div id="nav">
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="instruction.html">Instruction</a></li>
-            <li><a href="policy.html">Policy</a></li>
-        </ul>
-    </div>
+  <div id="nav">
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="instruction.html">Instruction</a></li>
+      <li><a href="event.html">Events</a></li>
+      <li><a href="policy.html">Policy</a></li>
+    </ul>
+  </div>
 </div>
 
 <div class="wrapper">
-    <div id="content">
-        <div id="section">
-            <h1>
-                The Relationship Between Music and Math
-            </h1>
-            <p>
-                We are surrounded by two things everyday... Math and Music. Most of the time we don't even notice the
-                math or we just choose to ignore it. But we notice music everywhere... Sometimes as soon as our radio
-                alarm clock goes off in the morning we are surrounded by it. When you take music lessons, we realize
-                that in that music, there are beautiful and symmetric numerical systems. From simple arithmetical
-                processes to things as complicated as Group Transformations, music is full of mathematics.
-        </p><p>
-                I would like to show you the beauty so some of the mathematical structure which underlies the basics of
-                Western music theory.
-        </p><p>
-                The Western musical system consists of 12 tones, or notes. We give these notes names using letters
-                A, B, C, etc. and we go all the way up to G and then we start at A again. Now this only accounts for 7
-                notes and the other 5 come from things called accidentals which are noted by the #(sharp) sign or the
-                (flat sign). There is already math involved here. These notes are just multiples of frequencies. The
-                lowest note on the piano is an A and its frequency is 27.5 Hz. To get A# you simply multiply by the 12th
-                root of 2 and you get 29.135 and you keep doing this and after doing it 12 times you will get 55 which
-                is 27.5x2. When you get a multiple of a frequency then it is the same note, up or down some number of
-                octaves. So 27.5 (A) is the same note as 55 (A), just one octave apart. So every note you hear in music
-                is just some frequency and is derived from this.
-        </p><p>
-                Now if we imagine adding one number to another as moving that number up the piano that many notes then
-                we can see that if you take
-        </p><p>
-                0+1=1 This means that 0(or C) moved up one note is C#.
-        </p><p>
-                You can do this with any numbers as many times as you want as long as you mod out by 12, which means
-                if you get a number higher than 12 when you add, simply divide that number by 12 and the remainder is
-                your new number.
-        </p><p>
-                9+11=20 20/12= 1 with a remainder of 8, so 8 is our new number. So when you move A up 11 notes you
-                will land on G#. And this works for any number of additions.
-        </p><p>
-                3+7+4+9=23=11mod12 This means that if you take D# and move it up 7 notes, then 4 more, then 9 more, you
-                will land on a B.
-        </p><p>
-                You can even do this with whole chords.
-        </p><p>
-                C major = {C,E,G} = {1,5,8} I will say that when you add a number to a chord, you are adding that number
-                to each note in the chord.
-        </p><p>
-                So C major, plus 7 = {1+7,5+7,8+7} = {8,0,3} which is a G# major chord.
-        </p><p>
-                An interesting note about this is that if you add a number to a major chord you will get a major chord
-                and if you add a number to a minor chord you will get a minor chord. This is basically what you are
-                doing when you transpose to a new key. You could do it to the entire scale and it is essentially the
-                same thing as going from one key to another.
-        </p><p>
-                There are many things you can do with this idea, such as inverting chords and doing whole Group
-                Transformations which will give very interesting musically related results, but the math is very
-                tedious and deep. This is just a glance at the very surface of the relations music has with math and
-                is one of the reasons why I believe musicians are generally better in areas such as math or science.
-           </p>
+  <div id="content">
+    <div id="section">
+      <h1>
+        The Relationship Between Music and Math
+      </h1>
+      <p>
+        We are surrounded by two things everyday... Math and Music. Most of the time we don't even notice the
+        math or we just choose to ignore it. But we notice music everywhere... Sometimes as soon as our radio
+        alarm clock goes off in the morning we are surrounded by it. When you take music lessons, we realize
+        that in that music, there are beautiful and symmetric numerical systems. From simple arithmetical
+        processes to things as complicated as Group Transformations, music is full of mathematics.
+      </p><p>
+      I would like to show you the beauty so some of the mathematical structure which underlies the basics of
+      Western music theory.
+    </p><p>
+      The Western musical system consists of 12 tones, or notes. We give these notes names using letters
+      A, B, C, etc. and we go all the way up to G and then we start at A again. Now this only accounts for 7
+      notes and the other 5 come from things called accidentals which are noted by the #(sharp) sign or the
+      (flat sign). There is already math involved here. These notes are just multiples of frequencies. The
+      lowest note on the piano is an A and its frequency is 27.5 Hz. To get A# you simply multiply by the 12th
+      root of 2 and you get 29.135 and you keep doing this and after doing it 12 times you will get 55 which
+      is 27.5x2. When you get a multiple of a frequency then it is the same note, up or down some number of
+      octaves. So 27.5 (A) is the same note as 55 (A), just one octave apart. So every note you hear in music
+      is just some frequency and is derived from this.
+    </p><p>
+      Now if we imagine adding one number to another as moving that number up the piano that many notes then
+      we can see that if you take
+    </p><p>
+      0+1=1 This means that 0(or C) moved up one note is C#.
+    </p><p>
+      You can do this with any numbers as many times as you want as long as you mod out by 12, which means
+      if you get a number higher than 12 when you add, simply divide that number by 12 and the remainder is
+      your new number.
+    </p><p>
+      9+11=20 20/12= 1 with a remainder of 8, so 8 is our new number. So when you move A up 11 notes you
+      will land on G#. And this works for any number of additions.
+    </p><p>
+      3+7+4+9=23=11mod12 This means that if you take D# and move it up 7 notes, then 4 more, then 9 more, you
+      will land on a B.
+    </p><p>
+      You can even do this with whole chords.
+    </p><p>
+      C major = {C,E,G} = {1,5,8} I will say that when you add a number to a chord, you are adding that number
+      to each note in the chord.
+    </p><p>
+      So C major, plus 7 = {1+7,5+7,8+7} = {8,0,3} which is a G# major chord.
+    </p><p>
+      An interesting note about this is that if you add a number to a major chord you will get a major chord
+      and if you add a number to a minor chord you will get a minor chord. This is basically what you are
+      doing when you transpose to a new key. You could do it to the entire scale and it is essentially the
+      same thing as going from one key to another.
+    </p><p>
+      There are many things you can do with this idea, such as inverting chords and doing whole Group
+      Transformations which will give very interesting musically related results, but the math is very
+      tedious and deep. This is just a glance at the very surface of the relations music has with math and
+      is one of the reasons why I believe musicians are generally better in areas such as math or science.
+    </p>
 
-        </div>
     </div>
-    <div id="sidebar">
-        <h3>Contacts</h3>
-        <p>E-mail: andremusicstudio@gmail.com</p>
-        <p>Phone: 559-731-3315</p>
-        <h3>Location</h3>
-        <div id="map" style="width:220px;height:147px;"></div>
-    </div>
+  </div>
+  <div id="sidebar">
+    <h3>Contacts</h3>
+    <p>E-mail: andremusicstudio@gmail.com</p>
+    <p>Phone: 559-731-3315</p>
+    <h3>Location</h3>
+    <div id="map" style="width:220px;height:147px;"></div>
+  </div>
 </div>
 
 <div class="wrapper-footer">
-    <div class="bottom">
-        <div id="foot1" class="col">
-            <h3>MENU</h3>
-            <ul id="menu-foot1">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="instruction.html">Instruction</a></li>
-                <li><a href="policy.html">Policy</a></li>
-            </ul>
-        </div>
-        <div id="foot2" class="col">
-            <h3>MISCELLANEA</h3>
-            <ul id="menu-foot2">
-                <li><a href="music_math.html" >Music and Math</a></li>
-                <li><a href="tips.html">20 tips how to practice</a></li>
-            </ul>
-        </div>
-        <div id="foot3" class="col">
-            <h3>CONTACT</h3>
-            <ul id="menu-foot3">
-                <li>Email:</li>
-                <li><a href="mailto:andremusicstudio@gmail.com">andremusicstudio@gmail.com</a></li>
-                <li>Phone:</li>
-                <li><a href="tel:+15597313315">559-731-3315</a></li>
-            </ul>
-        </div>
+  <div class="bottom">
+    <div id="foot1" class="col">
+      <h3>MENU</h3>
+      <ul id="menu-foot1">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="instruction.html">Instruction</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="policy.html">Policy</a></li>
+      </ul>
     </div>
+    <div id="foot2" class="col">
+      <h3>MISCELLANEA</h3>
+      <ul id="menu-foot2">
+        <li><a href="music_math.html" >Music and Math</a></li>
+        <li><a href="tips.html">20 tips how to practice</a></li>
+      </ul>
+    </div>
+    <div id="foot3" class="col">
+      <h3>CONTACT</h3>
+      <ul id="menu-foot3">
+        <li>Email:</li>
+        <li><a href="mailto:andremusicstudio@gmail.com">andremusicstudio@gmail.com</a></li>
+        <li>Phone:</li>
+        <li><a href="tel:+15597313315">559-731-3315</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 </body>

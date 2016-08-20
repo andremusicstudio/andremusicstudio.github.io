@@ -12,8 +12,21 @@ h2 {
 a:link, a:visited {
     text-decoration: none;
 }
+.songs_list li {
+  cursor: pointer;
+}
+.songs_list li,
+.wrapper a,
 .wrapper-bottom a {
-    color: #0070b3;
+    color: #832907;
+}
+.songs_list li:hover,
+.wrapper a:hover,
+.wrapper-bottom a:hover {
+  color: #0070b3;
+}
+.wrapper-bottom a {
+  margin-left: 12em;
 }
 
 .header {
@@ -84,8 +97,15 @@ a:link, a:visited {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
-    height: 441px;
+    /*height: 441px;*/
     padding: 0 10px;
+}
+.wrapper::after ,
+.wrapper-bottom::after,
+.wrapper-footer::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 #content {
     width: 720px;
@@ -135,10 +155,10 @@ a:link, a:visited {
     color: #0088cc;
 }
 .wrapper-bottom {
-    height: 321px;
+    /*height: 321px;*/
     background-color: #f0f0f0;
     position: relative;
-    padding: 0 10px;
+    padding: 10px;
 }
 .bottom {
     width: 960px;
@@ -170,7 +190,7 @@ a:link, a:visited {
     font-size: 80%;
     background-color: #555555;
     color: #0088cc;
-    height: 175px;
+    /*height: 175px;*/
     padding: 0 10px;
 }
 .wrapper-footer li a {
