@@ -30,6 +30,8 @@ jQuery(document).ready(function(){
   jQuery('.songs_list').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
     var song_src = "https://www.youtube.com/embed/"+ song_id;
-    jQuery('#video').attr('src', song_src);
+    console.log(song_id);
+    console.log(song_src);
+    jQuery('#video1').attr('src', song_src);
   });
 });
