@@ -4,8 +4,6 @@
 window.onload = function () {
 
   var firstLatlng = new google.maps.LatLng(37.326650, -121.938010);
-  //var secondLatlng = new google.maps.LatLng(37.321235, -122.054849);
-  //var canvasCenter = new google.maps.LatLng(37.351235, (-121.938010-122.054849)/2);
   var canvasCenter = new google.maps.LatLng(37.351235, -121.938010);
   var mapOptions = {
     zoom: 10,
@@ -19,19 +17,49 @@ window.onload = function () {
     map: map,
     title: "120 Ciro Ave, San Jose, CA"
   });
-  //var marker2 = new google.maps.Marker({
-  //  position: secondLatlng,
-  //  map: map,
-  //  title: "10141'A' Pasadena Ave, Cupertino, CA"
-  //});
-
 };
+
 jQuery(document).ready(function(){
   jQuery('.songs_list').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
-    var song_src = "https://www.youtube.com/embed/"+ song_id;
-    console.log(song_id);
-    console.log(song_src);
-    jQuery('#video1').attr('src', song_src);
+    presetVideo(song_id, player1);
   });
 });
+var player1;
+var player2;
+function onYouTubeIframeAPIReady() {
+  player1 = new YT.Player('video-player1', {
+    width: 683,
+    height: 384,
+    videoId: 'W86zz4nNW-U',
+    events: {
+      'onStateChange': onPlayerStateChange1
+    }
+  });
+  player2 = new YT.Player('video-player2', {
+    width: 683,
+    height: 384,
+    videoId: 'jB09ohZYP8w',
+    events: {
+      'onStateChange': onPlayerStateChange2
+    }
+  });
+}
+
+function onPlayerStateChange1(event) {
+  if(event.data==YT.PlayerState.ENDED) {
+    player1.seekTo(0);
+    player1.pauseVideo();
+    player1.stopVideo();
+  }
+}
+function onPlayerStateChange2(event) {
+  if(event.data==YT.PlayerState.ENDED) {
+    player2.seekTo(0);
+    player2.pauseVideo();
+    player2.stopVideo();
+  }
+}
+function presetVideo(video_id, player_var) {
+  player_var.loadVideoById(video_id);
+}
