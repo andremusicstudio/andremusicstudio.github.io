@@ -238,3 +238,7 @@ a:link, a:visited {
 .wrapper-footer li a {
     color: #bbbbbb;
 }
+/* expired*/
+#sidebar .upcoming-events {
+  display: none;
+}
