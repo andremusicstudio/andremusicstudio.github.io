@@ -27,6 +27,7 @@ jQuery(document).ready(function(){
 });
 var player1;
 var player2;
+var player3;
 function onYouTubeIframeAPIReady() {
   player1 = new YT.Player('video-player1', {
     width: 683,
@@ -44,6 +45,14 @@ function onYouTubeIframeAPIReady() {
       'onStateChange': onPlayerStateChange2
     }
   });
+  player3 = new YT.Player('video-player3', {
+    width: 683,
+    height: 384,
+    videoId: 'dAVkExsw1Us',
+    events: {
+      'onStateChange': onPlayerStateChange3
+    }
+  });
 }
 
 function onPlayerStateChange1(event) {
@@ -58,6 +67,13 @@ function onPlayerStateChange2(event) {
     player2.seekTo(0);
     player2.pauseVideo();
     player2.stopVideo();
+  }
+}
+function onPlayerStateChange3(event) {
+  if(event.data==YT.PlayerState.ENDED) {
+    player3.seekTo(0);
+    player3.pauseVideo();
+    player3.stopVideo();
   }
 }
 function presetVideo(video_id, player_var) {
