@@ -19,22 +19,28 @@ window.onload = function () {
   });
 };
 
+var player1;
+var player2;
+var player3;
 jQuery(document).ready(function(){
-  jQuery('.songs_list').find('li').click(function() {
+  jQuery('#list1').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
     presetVideo(song_id, player1);
   });
 });
-var player1;
-var player2;
-var player3;
+jQuery(document).ready(function(){
+  jQuery('#list3').find('li').click(function() {
+    var song_id = jQuery(this).attr("id");
+    presetVideo(song_id, player3);
+  });
+});
 function onYouTubeIframeAPIReady() {
   player1 = new YT.Player('video-player1', {
     width: 683,
     height: 384,
     videoId: 'W86zz4nNW-U',
     events: {
-      'onStateChange': onPlayerStateChange1
+      'onStateChange': onPlayerStateChange
     }
   });
   player2 = new YT.Player('video-player2', {
@@ -42,7 +48,7 @@ function onYouTubeIframeAPIReady() {
     height: 384,
     videoId: 'jB09ohZYP8w',
     events: {
-      'onStateChange': onPlayerStateChange2
+      'onStateChange': onPlayerStateChange
     }
   });
   player3 = new YT.Player('video-player3', {
@@ -50,30 +56,16 @@ function onYouTubeIframeAPIReady() {
     height: 384,
     videoId: 'dAVkExsw1Us',
     events: {
-      'onStateChange': onPlayerStateChange3
+      'onStateChange': onPlayerStateChange
     }
   });
 }
 
-function onPlayerStateChange1(event) {
+function onPlayerStateChange(event) {
   if(event.data==YT.PlayerState.ENDED) {
     player1.seekTo(0);
     player1.pauseVideo();
     player1.stopVideo();
-  }
-}
-function onPlayerStateChange2(event) {
-  if(event.data==YT.PlayerState.ENDED) {
-    player2.seekTo(0);
-    player2.pauseVideo();
-    player2.stopVideo();
-  }
-}
-function onPlayerStateChange3(event) {
-  if(event.data==YT.PlayerState.ENDED) {
-    player3.seekTo(0);
-    player3.pauseVideo();
-    player3.stopVideo();
   }
 }
 function presetVideo(video_id, player_var) {
