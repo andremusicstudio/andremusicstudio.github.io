@@ -66,6 +66,12 @@ function onPlayerStateChange(event) {
     player1.seekTo(0);
     player1.pauseVideo();
     player1.stopVideo();
+    player2.seekTo(0);
+    player2.pauseVideo();
+    player2.stopVideo();
+    player3.seekTo(0);
+    player3.pauseVideo();
+    player3.stopVideo();
   }
 }
 function presetVideo(video_id, player_var) {
