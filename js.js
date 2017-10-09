@@ -22,6 +22,7 @@ window.onload = function () {
 var player1;
 var player2;
 var player3;
+var player4;
 jQuery(document).ready(function(){
   jQuery('#list1').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
@@ -32,6 +33,12 @@ jQuery(document).ready(function(){
   jQuery('#list3').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
     presetVideo(song_id, player3);
+  });
+});
+jQuery(document).ready(function(){
+  jQuery('#list4').find('li').click(function() {
+    var song_id = jQuery(this).attr("id");
+    presetVideo(song_id, player4);
   });
 });
 function onYouTubeIframeAPIReady() {
@@ -59,6 +66,14 @@ function onYouTubeIframeAPIReady() {
       'onStateChange': onPlayerStateChange
     }
   });
+  player4 = new YT.Player('video-player4', {
+    width: 683,
+    height: 384,
+    videoId: '1IjiFRPcxG4',
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
 }
 
 function onPlayerStateChange(event) {
@@ -72,6 +87,9 @@ function onPlayerStateChange(event) {
     player3.seekTo(0);
     player3.pauseVideo();
     player3.stopVideo();
+    player4.seekTo(0);
+    player4.pauseVideo();
+    player4.stopVideo();
   }
 }
 function presetVideo(video_id, player_var) {
