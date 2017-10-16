@@ -1,0 +1,13 @@
+p.descript {
+  font-family: "Acme";
+  font-size: 19px;
+  color: gray;
+  margin-top: 10px;
+}
+#section h2 {
+  font-family: "Acme";
+  margin-bottom: 10px;
+}
+ol {
+  padding-bottom: 18px;
+}
