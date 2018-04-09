@@ -24,6 +24,7 @@ var player2;
 var player3;
 var player4;
 var player5;
+var player6;
 jQuery(document).ready(function(){
   jQuery('#list1').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
@@ -46,6 +47,12 @@ jQuery(document).ready(function(){
   jQuery('#list5').find('li').click(function() {
     var song_id = jQuery(this).attr("id");
     presetVideo(song_id, player5);
+  });
+});
+jQuery(document).ready(function(){
+  jQuery('#list6').find('li').click(function() {
+    var song_id = jQuery(this).attr("id");
+    presetVideo(song_id, player6);
   });
 });
 function onYouTubeIframeAPIReady() {
@@ -77,6 +84,14 @@ function onYouTubeIframeAPIReady() {
     width: 683,
     height: 384,
     videoId: "3iwdSZEObMw",
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
+  player6 = new YT.Player('video-player6', {
+    width: 683,
+    height: 384,
+    videoId: "4Ju3-Y7wv2k",
     events: {
       'onStateChange': onPlayerStateChange
     }
