@@ -242,3 +242,8 @@ a:link, a:visited {
 #sidebar .upcoming-events {
   display: none;
 }
+div#map-img {
+  width: 216px !important;
+  height: 147px !important;
+  border: 3px solid #ddd;
+}
